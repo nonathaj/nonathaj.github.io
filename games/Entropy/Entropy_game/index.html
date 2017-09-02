@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Missile Command</title>
+	<script type="text/javascript" src="js/phaser/phaser.js"></script>
+    <script type="text/javascript" src="js/Game.js"></script>
+    <script type="text/javascript" src="js/Menu.js"></script>
+    <script type="text/javascript" src="js/TextDisplay.js"></script>
+    <script type="text/javascript" src="js/Quote.js"></script>
+    <script type="text/javascript" src="js/Planet.js"></script>
+    <script type="text/javascript" src="js/Missile.js"></script>
+    <script type="text/javascript" src="js/MissileGroup.js"></script>
+    <script type="text/javascript" src="js/MissileLauncher.js"></script>
+    <script type="text/javascript" src="js/DifficultyManager.js"></script>
+    <script type="text/javascript" src="js/Weapon.js"></script>
+    <script type="text/javascript" src="js/SniperWeapon.js"></script>
+    <script type="text/javascript" src="js/ShotgunWeapon.js"></script>
+    <script type="text/javascript" src="js/FireworkWeapon.js"></script>
+    <script type="text/javascript" src="js/Bullet.js"></script>
+    <script type="text/javascript" src="js/CollisionBullet.js"></script>
+    <script type="text/javascript" src="js/Explosion.js"></script>
+    <script type="text/javascript" src="js/FlameThrower.js"></script>
+    <script type="text/javascript" src="js/BurstWeapon.js"></script>
+    <script type="text/javascript" src="js/LaserWeapon.js"></script>
+    <style>
+        body{
+            margin:0;
+            padding:0;
+            border:0;
+            cursor: none;
+        }
+        canvas{
+            margin-right:auto;
+            margin-left:auto;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var gameSize = window.innerWidth < window.innerHeight ? window.innerWidth : window.innerHeight;
+		gameSize = (gameSize < 700) ? 700 : gameSize;
+        var game = new Phaser.Game( gameSize, gameSize, Phaser.AUTO, 'game');
+        game.state.add('Game', MissileCommand.Game);
+        game.state.add('Menu', MissileCommand.Menu);
+        game.state.add('TextDisplay', MissileCommand.TextDisplay);
+        game.state.start("Menu");
+    </script>
+</body>
+</html>
