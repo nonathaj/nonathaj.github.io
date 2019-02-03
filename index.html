@@ -7,38 +7,36 @@
 	<meta name="author" content="Jon Kenkel">
 
 	<title>Jon Kenkel</title>
-
-	<!-- Twitter Bootstrap -->
-	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
-
-	<!-- Font Awesome (for social media icons) -->
-	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
 
 	<style>
-		.clickable  {
-			cursor:pointer;
-		}
-		pre
-		{
-			-moz-tab-size:	4;
-			-o-tab-size:	4;
-			tab-size:		4;
-		}
 		html {
 			overflow-y: scroll; 
 		}
-		#code .panel-heading:hover {
+		.code-header  {
+			cursor:pointer;
+			padding-bottom:0px;
+		}
+		.code-header:hover {
 			background-color:#eee;
 		}
-		.game-info .btn {
-			margin-bottom:10px;
+		.navbar {
+			margin-top:20px;
+			margin-bottom:20px;
 		}
-		.navbar-brand:hover {
-			color:#999 !important;
+		.unselectable {
+			-webkit-touch-callout: none;
+			-webkit-user-select: none;
+			-khtml-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+		}
+		.code-card{
+			margin-bottom:20px;
 		}
 	</style>
-
-	<base target="_blank">
 
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!--[if lt IE 9]>
@@ -48,29 +46,24 @@
 </head>
 <body>
 	<div role="tabpanel" id="body-content">
-		<div class="navbar-wrapper">
+		<div class="container">
+		<nav class="navbar navbar-expand-sm navbar-dark bg-dark rounded">
 			<div class="container">
-				<div class="navbar navbar-inverse" role="navigation" style="margin-top:20px;">
-					<div class="navbar-header">
-						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-							<span class="sr-only">Toggle navigation</span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-						</button>
-						<span class="navbar-brand">Jon Kenkel</span>
-					</div>
-					<div class="navbar-collapse collapse">
-						<ul class="nav navbar-nav">
-							<li class="active"><a href="#games" data-toggle="tab">Games</a></li>
-							<li><a href="#resume" data-toggle="tab">Resume</a></li>
-							<li><a href="#code" data-toggle="tab">Code Samples</a></li>
-							<li><a href="#about" data-toggle="tab">About / Contact</a></li>
-						</ul>
-					</div>
+				<span class="navbar-brand">Jon Kenkel</span>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+				  <span class="navbar-toggler-icon"></span>
+				</button>
+
+				<div class="collapse navbar-collapse">
+					<ul class="nav navbar-nav" role="tablist">
+						<li class="nav-item"><a class="nav-link unselectable active" href="#games" data-toggle="tab" role="tab" aria-selected="true">Games</a></li>
+						<li class="nav-item"><a class="nav-link unselectable" href="#resume" data-toggle="tab" role="tab" aria-selected="false">Resume</a></li>
+						<li class="nav-item"><a class="nav-link unselectable" href="#code" data-toggle="tab" role="tab" aria-selected="false">Code Samples</a></li>
+						<li class="nav-item"><a class="nav-link unselectable" href="#about" data-toggle="tab" role="tab" aria-selected="false">About / Contact</a></li>
+					</ul>
 				</div>
-			</div>
-		</div>
+			<div>
+		</nav>
 
 		<div id='content'>
 			<div class="tab-content">
@@ -78,16 +71,13 @@
 					
 					Games Tab
 					_________________________________________________________________________________ -->
-				<div id="games" class="tab-pane active fade in container" role="tabpanel">
+				<div id="games" class="tab-pane active" role="tabpanel">
 
 					<!-- Paladins Game -->
 					<div class="row featurette game-feature" id="game-paladins">
 						<div class="game-images">
-							<a href="//www.paladins.com/">
-								<img class="featurette-image img-responsive" src="games/Paladins/Logos/LOGO_Paladins_BETA_Black_SM_500x223.png" alt="Paladins" style="margin-bottom:10px;">
-							</a>
 							<div class="embed-responsive embed-responsive-16by9" style="margin-bottom:10px;">
-								<iframe class="" src="//www.youtube.com/embed/Dh9F7AZrxMk" frameborder="0" allowfullscreen></iframe>
+								<iframe class="" src="https://www.youtube.com/embed/Dh9F7AZrxMk" frameborder="0" allowfullscreen></iframe>
 							</div>
 						</div>
 						<div class="game-info">
@@ -106,14 +96,14 @@
 					<div class="row featurette game-feature" id="game-reload-360">
 						<div class="game-images">
 							<div class="embed-responsive embed-responsive-16by9" style="margin-bottom:10px;">
-								<iframe class="embed-responsive-item" src="//www.youtube.com/embed/kRhSN5_afnE" frameborder="0" allowfullscreen></iframe>
+								<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/kRhSN5_afnE" frameborder="0" allowfullscreen></iframe>
 							</div>
 						</div>
 						<div class="game-info">
 							<h2 class="featurette-heading">Reload 360 <small>April 2016</small></h2>
 							<p class="lead">A fast-paced arcade shooter that gives players 360-degree omni-vision and wall walking to help them track down and eliminate their opponents. Take control of a robot sentinel as you vie for control of one of three deep-space battle arenas!</p>
 							<p>Built in <i><a href="//unity3d.com/">Unity</a> 3D &amp; C#</i></p>
-							<a class="btn btn-primary" href="//steamcommunity.com/sharedfiles/filedetails/?id=632342911" role="button" data-toggle="tooltip" data-placement="top" title="Tooltip on top"><i class="fa fa-steam"></i> Steam Greenlight</a>
+							<a class="btn btn-primary" href="https://steamcommunity.com/sharedfiles/filedetails/?id=632342911" role="button" data-toggle="tooltip" data-placement="top" title="Tooltip on top"><i class="fab fa-steam"></i> Steam Greenlight</a>
 						</div>
 					</div>
 					<hr class="featurette-divider">
@@ -123,66 +113,62 @@
 					<div class="row featurette game-feature" id="game-troncano">
 						<div class="game-images">
 							<div class="embed-responsive embed-responsive-16by9" style="margin-bottom:10px;">
-								<iframe class="embed-responsive-item" src="//www.youtube.com/embed/HmL48ua84YE" frameborder="0" allowfullscreen></iframe>
+								<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/HmL48ua84YE" frameborder="0" allowfullscreen></iframe>
 							</div>
-							<img class="featurette-image img-responsive" src="games/Troncano/teamphoto.jpg" alt="Team Brostophalous" style="margin-bottom:10px;">
+							<img class="featurette-image img-fluid" src="games/Troncano/teamphoto.jpg" alt="Team Brostophalous" style="margin-bottom:10px;">
 						</div>
 						<div class="game-info">
 							<h2 class="featurette-heading">Troncano <small>December 2014</small></h2>
 							<p class="lead"><i>Troncano</i> is a 3D platformer where the player is able to push and pull themselves off of pieces of the environment to move around.  Inside the volcano, players must navigate between platforms trying to collect gems and avoid falling into the lava.</p>
 							<p>Built in <i><a href="//www.unrealengine.com">Unreal Engine 4</a> &amp; Blueprints Visual Scripting</i></p>
-							<table class="table table-condensed table-responsive table-striped" data-link="row">
-								<thead>
+							<div class="table-responsive">
+								<table class="table table-sm table-striped" data-link="row">
 									<tr>
-										<th>Team Brostophalous</th>
-										<th></th>
+										<td><a href="http://jackiecao.weebly.com/">Jackie Cao</a></td>
+										<td>Producer</td>
 									</tr>
-								</thead>
-								<tr>
-									<td><a href="http://jackiecao.weebly.com/">Jackie Cao</a></td>
-									<td>Producer</td>
-								</tr>
-								<tr>
-									<td><a href="//grayeiii.wix.com/reifry/">Reilly Gray</a></td>
-									<td>Artist</td>
-								</tr>
-								<tr>
-									<td>Jon Kenkel</td>
-									<td>Lead Engineer</td>
-								</tr>
-								<tr>
-									<td>Earl Kirkland</td>
-									<td>Technical Artist</td>
-								</tr>
-								<tr>
-									<td><a href="//snkulkarni92.github.io">Saurabh Kulkarni</a></td>
-									<td>Engineer</td>
-								</tr>
-								<tr>
-									<td>Zach Lorenzen</td>
-									<td>Engineer</td>
-								</tr>
-								<tr>
-									<td><a href="http://karthik1103.weebly.com/">Karthik Narayan</a></td>
-									<td>Engineer</td>
-								</tr>
-								<tr>
-									<td><a href="//drewpariser.weebly.com/">Drew Pariser</a></td>
-									<td>Producer</td>
-								</tr>
-								<tr>
-									<td><a href="http://virtualworldartist.com/">Aditya Rajani</a></td>
-									<td>Artist</td>
-								</tr>
-								<tr>
-									<td><a href="http://aqeeltapia.weebly.com/">Aqeel Tapia</a></td>
-									<td>Engineer</td>
-								</tr>
-								<tr>
-									<td><a href="//erikwillisgames.com">Erik Willis</a></td>
-									<td>Engineer</td>
-								</tr>
-							</table>
+									<tr>
+										<td><a href="//grayeiii.wix.com/reifry/">Reilly Gray</a></td>
+										<td>Artist</td>
+									</tr>
+									<tr>
+										<td>Jon Kenkel</td>
+										<td>Lead Engineer</td>
+									</tr>
+									<tr>
+										<td>Earl Kirkland</td>
+										<td>Technical Artist</td>
+									</tr>
+									<tr>
+										<td><a href="//snkulkarni92.github.io">Saurabh Kulkarni</a></td>
+										<td>Engineer</td>
+									</tr>
+									<tr>
+										<td>Zach Lorenzen</td>
+										<td>Engineer</td>
+									</tr>
+									<tr>
+										<td><a href="http://karthik1103.weebly.com/">Karthik Narayan</a></td>
+										<td>Engineer</td>
+									</tr>
+									<tr>
+										<td><a href="//drewpariser.weebly.com/">Drew Pariser</a></td>
+										<td>Producer</td>
+									</tr>
+									<tr>
+										<td><a href="http://virtualworldartist.com/">Aditya Rajani</a></td>
+										<td>Artist</td>
+									</tr>
+									<tr>
+										<td><a href="http://aqeeltapia.weebly.com/">Aqeel Tapia</a></td>
+										<td>Engineer</td>
+									</tr>
+									<tr>
+										<td><a href="//erikwillisgames.com">Erik Willis</a></td>
+										<td>Engineer</td>
+									</tr>
+								</table>
+							</div>
 						</div>
 					</div>
 					<hr class="featurette-divider">
@@ -191,46 +177,42 @@
 					<!-- No Gamer Left Behind Game -->
 					<div class="row featurette game-feature" id="game-nogamerleftbehind">
 						<div class="game-images">
-							<img class="featurette-image img-responsive" src="games/NoGamerLeftBehind/nglb_s1.jpg" alt="No Gamer Left Behind Screenshot" style="margin-bottom:10px;">
-							<img class="featurette-image img-responsive" src="games/NoGamerLeftBehind/team_ostrich2.jpg" alt="Team Ostrich" style="margin-bottom:10px;">
+							<img class="featurette-image img-fluid" src="games/NoGamerLeftBehind/nglb_s1.jpg" alt="No Gamer Left Behind Screenshot" style="margin-bottom:10px;">
+							<img class="featurette-image img-fluid" src="games/NoGamerLeftBehind/team_ostrich2.jpg" alt="Team Ostrich" style="margin-bottom:10px;">
 						</div>
 						<div class="game-info">
 							<h2 class="featurette-heading">No Gamer Left Behind <small>November 2014</small></h2>
 							<p class="lead">Control the video game community--all of the community--as you explore this dangerous platformer.  Your goal: get as many community members to the end as you can, and maintain gender parity as you do so.</p>
 							<p>Prompted by <a href="//www.pcgamer.com/researchers-find-that-female-pc-gamers-outnumber-males/">PC Gamer's report</a> that women now make up over 50% of pc gamers across all genres, <i>No Gamer Left Behind</i> is a fun game with the serious purpose of spreading this exciting news.</p>
 							<p>Built in <i><a href="//unity3d.com/">Unity</a> 2D &amp; C#</i></p>
-							<table class="table table-condensed table-responsive table-striped" data-link="row">
-								<thead>
+							<div class="table-responsive">
+								<table class="table table-sm table-striped" data-link="row">
 									<tr>
-										<th>Team Ostrich</th>
-										<th></th>
+										<td><a href="//bgharrison.strikingly.com/">Blake Harrison</a></td>
+										<td>Producer and Level Designer</td>
 									</tr>
-								</thead>
-								<tr>
-									<td><a href="//bgharrison.strikingly.com/">Blake Harrison</a></td>
-									<td>Producer and Level Designer</td>
-								</tr>
-								<tr>
-									<td>Jon Kenkel</td>
-									<td>Lead Engineer</td>
-								</tr>
-								<tr>
-									<td><a href="//www.lostrealism.com">Erica Larson</a></td>
-									<td>Technical Artist</td>
-								</tr>
-								<tr>
-									<td>Zach Lorenzen</td>
-									<td>Engineer</td>
-								</tr>
-								<tr>
-									<td>Katherine Marsh</td>
-									<td>Artist</td>
-								</tr>
-								<tr>
-									<td><a href="//erikwillisgames.com">Erik Willis</a></td>
-									<td>Engineer</td>
-								</tr>
-							</table>
+									<tr>
+										<td>Jon Kenkel</td>
+										<td>Lead Engineer</td>
+									</tr>
+									<tr>
+										<td><a href="//www.lostrealism.com">Erica Larson</a></td>
+										<td>Technical Artist</td>
+									</tr>
+									<tr>
+										<td>Zach Lorenzen</td>
+										<td>Engineer</td>
+									</tr>
+									<tr>
+										<td>Katherine Marsh</td>
+										<td>Artist</td>
+									</tr>
+									<tr>
+										<td><a href="//erikwillisgames.com">Erik Willis</a></td>
+										<td>Engineer</td>
+									</tr>
+								</table>
+							</div>
 							<a class="btn btn-primary" href="games/NoGamerLeftBehind/NoGamerLeftBehind_Win.zip" role="button" target="_self"><i class="fa fa-download"></i> Download</a> <small>for Windows</small>
 						</div>
 					</div>
@@ -240,47 +222,42 @@
 					<!-- Entropy Game -->
 					<div class="row featurette game-feature" id="game-entropy">
 						<div class="game-images">
-							<img class="featurette-image img-responsive" src="games/Entropy/EntropyScreen2.png" alt="Entropy Screenshot" style="margin-bottom:10px;">
-							<img class="featurette-image img-responsive" src="games/Entropy/TeamTron.jpg" alt="Team Tron" style="margin-bottom:10px;">
+							<img class="featurette-image img-fluid" src="games/Entropy/EntropyScreen2.png" alt="Entropy Screenshot" style="margin-bottom:10px;">
+							<img class="featurette-image img-fluid" src="games/Entropy/TeamTron.jpg" alt="Team Tron" style="margin-bottom:10px;">
 						</div>
 						<div class="game-info">
 							<h2 class="featurette-heading">Entropy <small>September 2014</small></h2>
 							<p class="lead"><i>Entropy</i> is about the battle of order vs. chaos, and how order breeds chaos while trying to stop it.  Varying from the original <i>Missile Command</i>, there are no cities to protect, only the single planet.  The player can only fire the closest weapon to where they are aiming or rotate the planet.  This leads to a variety of strategies for how to best go after all the incoming agents of chaos.</p>
 							<p>Based on the 1980 cult classic <a href="//en.wikipedia.org/wiki/Missile_Command"><i>Missile Command</i></a>.</p>
 							<p>Built in <i>HTML5, JavaScript &amp; <a href="//phaser.io/">Phaser</a></i></p>
-							<table class="table table-condensed table-responsive table-striped" data-link="row">
-								<thead>
+							<div class="table-responsive">
+								<table class="table table-sm table-striped" data-link="row">
 									<tr>
-										<th>Team Tron</th>
-										<th></th>
+										<td><a href="//blogs.eae.utah.edu/pbills/game-designproduction-portfolio/">Paul Bills</a></td>
+										<td>Producer</td>
 									</tr>
-								</thead>
-								<tr>
-									<td><a href="//blogs.eae.utah.edu/pbills/game-designproduction-portfolio/">Paul Bills</a></td>
-									<td>Producer</td>
-								</tr>
-								<tr>
-									<td>Daniel Blair</td>
-									<td>Tech Art</td>
-								</tr>
-								<tr>
-									<td>Yash Kapani</td>
-									<td>Engineer</td>
-								</tr>
-								<tr>
-									<td>Jon Kenkel</td>
-									<td>Lead Engineer</td>
-								</tr>
-								<tr>
-									<td>Allen Stevenson</td>
-									<td>Artist</td>
-								</tr>
-								<tr>
-									<td><a href="http://diana12131990.wix.com/portfolio">Tzu-Ying (Diana) Wang</a></td>
-									<td>Engineer</td>
-								</tr>
-							</table>
-
+									<tr>
+										<td>Daniel Blair</td>
+										<td>Tech Art</td>
+									</tr>
+									<tr>
+										<td>Yash Kapani</td>
+										<td>Engineer</td>
+									</tr>
+									<tr>
+										<td>Jon Kenkel</td>
+										<td>Lead Engineer</td>
+									</tr>
+									<tr>
+										<td>Allen Stevenson</td>
+										<td>Artist</td>
+									</tr>
+									<tr>
+										<td><a href="http://diana12131990.wix.com/portfolio">Tzu-Ying (Diana) Wang</a></td>
+										<td>Engineer</td>
+									</tr>
+								</table>
+							</div>
 							<a class="btn btn-primary" href="games/Entropy/Entropy_game/" role="button"><i class="fa fa-gamepad"></i> Play Now</a>
 						</div>
 					</div>
@@ -290,42 +267,42 @@
 					<!-- Dias Game -->
 					<div class="row featurette game-feature" id="game-dias">
 						<div class="game-images">
-							<img class="featurette-image img-responsive" src="games/Dias/ss.jpg" alt="Dias Screenshot" style="margin-bottom:10px;">
-							<img class="featurette-image img-responsive" src="games/Dias/scholarsday2.jpg" alt="Undergrad Dias Team" style="margin-bottom:10px;">
+							<img class="featurette-image img-fluid" src="games/Dias/ss.jpg" alt="Dias Screenshot" style="margin-bottom:10px;">
+							<img class="featurette-image img-fluid" src="games/Dias/scholarsday2.jpg" alt="Undergrad Dias Team" style="margin-bottom:10px;">
 						</div>
 						<div class="game-info" style="padding-bottom:10px;">
 							<h2 class="featurette-heading">Dias <small>May 2014</small></h2>
 							<p class="lead">Dias is a fully 3D, multiplayer, competitive platformer. Players are split into teams, and they play in an arena composed of platforms. Each team is attempting to knock the opposing players off all the platforms and beyond the play area. Players are be able to customize how they play based on certain movement abilities and attack abilties.</p>
 							<p>Built in <i><a href="//unity3d.com/">Unity</a> 3D &amp; C#</i></p>
-							<table class="table table-condensed table-responsive table-striped" data-link="row">
-								<tr>
-									<td>Jon Kenkel</td>
-									<td>Engineer</td>
-								</tr>
-								<tr>
-									<td>Zach Lorenzen</td>
-									<td>Engineer</td>
-								</tr>
-								<tr>
-									<td><a href="//jbshep.github.io">Dr. Jason Shepherd</a></td>
-									<td>Faculty Advisor</td>
-								</tr>
-							</table>
-
+							<div class="table-responsive">
+								<table class="table table-sm table-striped" data-link="row">
+									<tr>
+										<td>Jon Kenkel</td>
+										<td>Engineer</td>
+									</tr>
+									<tr>
+										<td>Zach Lorenzen</td>
+										<td>Engineer</td>
+									</tr>
+									<tr>
+										<td><a href="//jbshep.github.io">Dr. Jason Shepherd</a></td>
+										<td>Faculty Advisor</td>
+									</tr>
+								</table>
+							</div>
 							<a class="btn btn-primary" href="//diasdev.blogspot.com/" role="button"><i class="fa fa-archive"></i> Blog Archive</a>
 							<a class="btn btn-primary" href="games/Dias/Dias Windows Build.zip" role="button" target="_self"><i class="fa fa-download"></i> Download</a> <small>for Windows</small>
 						</div>
 					</div>
 					<hr class="featurette-divider">
 					<!-- End Dias Game -->
-
 				</div><!-- games tab -->
 
 				<!-- _________________________________________________________________________________
 					
 					Resume Tab
 					_________________________________________________________________________________ -->
-				<div id="resume" class="tab-pane fade container" role="tabpanel">
+				<div id="resume" class="tab-pane fade" role="tabpanel">
 					<a class="btn btn-primary" href="Jon Kenkel Resume.pdf" style="margin-bottom:20px;" target="_self"><i class="fa fa-download"></i> Download Resume</a>
 
 					<div class="embed-responsive embed-responsive-4by3" style="margin-bottom:20px;">
@@ -337,81 +314,29 @@
 					
 					Code Samples Tab
 					_________________________________________________________________________________ -->
-				<div id="code" class="tab-pane fade container" role="tabpanel">
-
-					<a class="btn btn-primary" href="//github.com/nonathaj" style="margin-bottom:20px;"><i class="fa fa-github-square"></i> Github Profile</a>
-					<!--<a class="btn btn-primary" href="//blogs.eae.utah.edu/jkenkel/" style="margin-bottom:20px;"><i class="fa fa-wordpress"></i> Development Blog</a>-->
-
-					<!-- C# Unity Singleton -->
-					<div class="panel panel-default">
-						<div class="panel-heading clickable">
-							<h3 class="panel-title"><span class="glyphicon glyphicon-chevron-right chevron"></span> C# Unity Specific Singleton</h3>
-						</div>
-						<div class="panel-body panel-content code-group">
-							<div class="tab-content">
-								<div role="tabpanel" class="load-code fade tab-pane active in" id="code/UnitySingleton/UnitySingleton.cs"></div>
-								<div role="tabpanel" class="load-code fade tab-pane" id="code/UnitySingleton/UnitySingletonAttribute.cs"></div>
-							</div>
-						</div>
-					</div>
-
-					<!-- C++ Memory Manager Sample -->
-					<div class="panel panel-default">
-						<div class="panel-heading clickable">
-							<h3 class="panel-title"><span class="glyphicon glyphicon-chevron-right chevron"></span> C++ Heap Memory Space Manager (uses SmallBlockAllocator)</h3>
-						</div>
-						<div class="panel-body panel-content code-group">
-							<div class="tab-content">
-								<div role="tabpanel" class="load-code fade tab-pane active in" id="code/MemoryManager_cpp/HeapAllocator.h"></div>
-								<div role="tabpanel" class="load-code fade tab-pane" id="code/MemoryManager_cpp/HeapAllocator.inl"></div>
-								<div role="tabpanel" class="load-code fade tab-pane" id="code/MemoryManager_cpp/HeapAllocator.cpp"></div>
-								<div role="tabpanel" class="load-code fade tab-pane" id="code/MemoryManager_cpp/LLNode.h"></div>
-								<div role="tabpanel" class="load-code fade tab-pane" id="code/MemoryManager_cpp/MemoryBlock.h"></div>
-								<div role="tabpanel" class="load-code fade tab-pane" id="code/MemoryManager_cpp/MemoryBlock.cpp"></div>
-							</div>
-						</div>
-					</div>
-
-					<!-- C++ SmallBlockAllocator Sample -->
-					<div class="panel panel-default">
-						<div class="panel-heading clickable">
-							<h3 class="panel-title"><span class="glyphicon glyphicon-chevron-right chevron"></span> C++ SmallBlockAllocator and BitField</h3>
-						</div>
-						<div class="panel-body panel-content code-group">
-							<div class="tab-content">
-								<div role="tabpanel" class="load-code fade tab-pane active in" id="code/MemoryManager_cpp/SmallBlockAllocator.h"></div>
-								<div role="tabpanel" class="load-code fade tab-pane" id="code/MemoryManager_cpp/SmallBlockAllocator.inl"></div>
-								<div role="tabpanel" class="load-code fade tab-pane" id="code/MemoryManager_cpp/SmallBlockAllocator.cpp"></div>
-								<div role="tabpanel" class="load-code fade tab-pane" id="code/MemoryManager_cpp/BitField.h"></div>
-								<div role="tabpanel" class="load-code fade tab-pane" id="code/MemoryManager_cpp/BitField.inl"></div>
-								<div role="tabpanel" class="load-code fade tab-pane" id="code/MemoryManager_cpp/BitField.cpp"></div>
-							</div>
-						</div>
-					</div>
-
+				<div id="code" class="tab-pane fade" role="tabpanel">
+					<a class="btn btn-primary" href="//github.com/nonathaj" style="margin-bottom:20px;"><i class="fab fa-github"></i> Github Profile</a>
 				</div><!-- code samples tab -->
 
 				<!-- _________________________________________________________________________________
 					
 					About Me Tab
 					_________________________________________________________________________________ -->
-				<div id="about" class="tab-pane fade container" role="tabpanel">
+				<div id="about" class="tab-pane fade" role="tabpanel">
 
 					<div class="row">
 						<div class="col-lg-3 col-md-4 col-sm-4 col-xs-5">
-							<img class="img-responsive" src="images/jon2016.jpg" alt="Jon Kenkel photo" style="margin-bottom:10px;">
+							<img class="img-fluid" src="images/jon2016.jpg" alt="Jon Kenkel photo" style="margin-bottom:10px;">
 							<div class="list-group">
-								<a class="list-group-item" href="tel:+1-202-430-5665"><span class="fa fa-phone-square fa-fw fa-lg"></span>&nbsp; (202) 430-5665</a>
-								<a class="list-group-item" href="mailto:jonkenkel@outlook.com"><span class="fa fa-envelope fa-fw fa-lg"></span>&nbsp; jonkenkel@outlook.com</a>
-								<!--<a class="list-group-item" href="//blogs.eae.utah.edu/jkenkel/"><span class="fa fa-wordpress fa-fw fa-lg"></span>&nbsp; Dev Blog</a>-->
-								<a class="list-group-item" href="//github.com/nonathaj"><span class="fa fa-github-square fa-fw fa-lg"></span>&nbsp; nonathaj</a>
-								<a class="list-group-item" href="//www.twitch.tv/nonathaj"><span class="fa fa-twitch fa-fw fa-lg"></span>&nbsp; nonathaj</a>
-								<a class="list-group-item" href="//www.linkedin.com/in/jonkenkel"><span class="fa fa-linkedin-square fa-fw fa-lg"></span>&nbsp; jonkenkel</a>
-								<a class="list-group-item" href="//twitter.com/nonathaj"><span class="fa fa-twitter-square fa-fw fa-lg"></span>&nbsp; @nonathaj</a>
-								<a class="list-group-item" href="//www.facebook.com/nonathaj"><span class="fa fa-facebook-square fa-fw fa-lg"></span>&nbsp; Facebook</a>
-								<!--<a class="list-group-item" href="//plus.google.com/+JonKenkel"><span class="fa fa-google-plus-square fa-fw fa-lg"></span>&nbsp; +JonKenkel</a>-->
-								<a class="list-group-item" href="//steamcommunity.com/profiles/76561198019771326"><span class="fa fa-steam-square fa-fw fa-lg"></span>&nbsp; nonathaj</a>
-								<span class="list-group-item"><span class="fa fa-skype fa-fw fa-lg"></span>&nbsp; nonathaj</span>
+								<a class="list-group-item" href="tel:+1-202-430-5665"><i class="fas fa-phone fa-lg"></i>&nbsp; (202) 430-5665</a>
+								<a class="list-group-item" href="mailto:jonkenkel@outlook.com"><i class="fas fa-envelope fa-lg"></i>&nbsp; jonkenkel@outlook.com</a>
+								<a class="list-group-item" href="https://github.com/nonathaj"><i class="fab fa-github fa-lg"></i>&nbsp; nonathaj</a>
+								<a class="list-group-item" href="https://www.linkedin.com/in/jonkenkel"><i class="fab fa-linkedin fa-lg"></i>&nbsp; jonkenkel</a>
+								<a class="list-group-item" href="https://twitter.com/nonathaj"><i class="fab fa-twitter fa-lg"></i>&nbsp; @nonathaj</a>
+								<a class="list-group-item" href="https://www.facebook.com/nonathaj"><i class="fab fa-facebook-square fa-lg"></i>&nbsp; Facebook</a>
+								<a class="list-group-item" href="https://www.twitch.tv/nonathaj"><i class="fab fa-twitch fa-lg"></i>&nbsp; nonathaj</a>
+								<a class="list-group-item" href="https://steamcommunity.com/profiles/76561198019771326"><i class="fab fa-steam fa-lg"></i>&nbsp; nonathaj</a>
+								<span class="list-group-item"><i class="fab fa-skype fa-lg"></i>&nbsp; nonathaj</span>
 							</div>	
 						</div>
 						<div class="col-lg-9 col-md-8 col-sm-8 col-xs-7">
@@ -426,24 +351,25 @@
 								<li><a href="//www.amnesiagame.com">Amnesia: The Dark Descent</a></li>
 								<li><a href="//necrodancer.com">Crypt of the Necrodancer</a></li>
 								<li><a href="//www.oddworld.com/oddworldgames/strangers-wrath">Oddworld: Stranger's Wrath</a></li>
-								<li><a href="//suckerpunch.playstation.com">The Infamous Series</a></li>
+								<li><a href="//www.suckerpunch.com/category/games/infamous2/">The Infamous Series</a></li>
 								<li><a href="//en.wikipedia.org/wiki/Halo_(series)">The Halo Series</a> (But monstly 1-3 and ODST)</li>
 							</ul>
 						</div>
 					</div>
-
 				</div><!-- about me tab -->
 
 			</div><!-- /tab-content -->
 		</div>
 	</div>
+	</div>
 
-	<!-- Jquery -->
-	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-	
+	<!-- Jquery -->	
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+
 	<!-- Twitter Bootstrap -->
-	<script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+
 	<script type="text/javascript">
 		//Source http://stackoverflow.com/questions/37684/how-to-replace-plain-urls-with-links
 		function linkify(inputText) 
@@ -466,74 +392,92 @@
 		}
 
 		$(document).ready(function(){
-
-			//create tabs and load files for each code-group project
-			$('.code-group').each(function(){
-				loads = $(this).find('.load-code');
-
-				//load all each code sample file for this project
-				loads.each(function(){
-					var div = $(this);
-					$.ajax({
-						url : $(this).attr('id'),
-						dataType: "text",
-						success : function (data) {
-							data = data.split("<").join("&lt;");	//swap <
-							data = data.split(">").join("&gt;");	//swap >
-							data = linkify(data);
-							div.html("<pre class='prettyprint'>" + data + "</pre>");
-						}
-					});
-					div.attr("id", div.attr("id").split("/").pop().split(".").join("_") );		//remove the link from the id
-				});
-
-				//Build the tabs for each grouping
-				tabString = "<ul class='nav nav-pills' style='padding-bottom:10px' id='" + loads[0].id +"-sample'>";
-				loads.each(function(index){
-					tabString += "<li class='" + (index == 0 ? " active" : "") + "' ><a data-toggle='tab' href='#" + $(this).attr('id') + "'>" + $(this).attr('id').split("_").join(".") + "</a></li>";
-				});
-				tabString += "</ul>";
-
-				//add the tabs to the beginning of the group
-				$(this).prepend(tabString);
-			});
-
 			//Move the even games to have pictures on the right, and odd to have pictures on the left
 			$(".game-feature > .game-images").addClass("col-md-5 col-sm-6");
 			$(".game-feature > .game-info").addClass("col-md-7 col-sm-6");
 			$(".game-feature").each(function(index){
-				if(index % 2 == 0)		//even numbered features have the images moved to the right
+				if(index % 2 == 0) //even numbered features have the images moved to the right
 				{
 					images = $(this).children(".game-images").detach();
 					$(this).append(images);
 				}
 			});
 
-			//Clickable panel-heading load
-			$('.panel-heading.clickable').parents('.panel').find('.panel-content').slideUp();
-			$('.panel-heading.clickable').addClass('panel-collapsed');
-			$('.panel-heading.clickable').find('.chevron').removeClass('glyphicon-chevron-down').addClass('glyphicon-chevron-right');
+			var codeSamples = [
+				{
+					"name":"C# Unity Specific Singleton",
+					"files":[
+						{ "name":"UnitySingleton.cs",          "src":"code/UnitySingleton/UnitySingleton.cs" },
+						{ "name":"UnitySingletonAttribute.cs", "src":"code/UnitySingleton/UnitySingletonAttribute.cs" },
+					]
+				},
+				{
+					"name":"C++ Heap Memory Space Manager (uses SmallBlockAllocator)",
+					"files":[
+						{ "name":"HeapAllocator.h",   "src":"code/MemoryManager_cpp/HeapAllocator.h" },
+						{ "name":"HeapAllocator.inl", "src":"code/MemoryManager_cpp/HeapAllocator.inl" },
+						{ "name":"HeapAllocator.cpp", "src":"code/MemoryManager_cpp/HeapAllocator.cpp" },
+						{ "name":"LLNode.h",          "src":"code/MemoryManager_cpp/LLNode.h" },
+						{ "name":"MemoryBlock.h",     "src":"code/MemoryManager_cpp/MemoryBlock.h" },
+						{ "name":"MemoryBlock.cpp",   "src":"code/MemoryManager_cpp/MemoryBlock.cpp" },
+					]
+				},
+				{
+					"name":"C++ SmallBlockAllocator and Bitfield",
+					"files":[
+						{ "name":"SmallBlockAllocator.h",   "src":"code/MemoryManager_cpp/SmallBlockAllocator.h" },
+						{ "name":"SmallBlockAllocator.cpp", "src":"code/MemoryManager_cpp/SmallBlockAllocator.cpp" },
+						{ "name":"BitField.h",              "src":"code/MemoryManager_cpp/BitField.h" },
+						{ "name":"BitField.inl",            "src":"code/MemoryManager_cpp/BitField.inl" },
+						{ "name":"BitField.cpp",            "src":"code/MemoryManager_cpp/BitField.cpp" },
+					]
+				},
+			];
 
-			//If a clickable panel-heading is clicked
-			$('.panel-heading.clickable').on("click", function (e) {
-				if ($(this).hasClass('panel-collapsed')) {
-					// expand the panel
-					$(this).parents('.panel').find('.panel-content').slideDown();
-					$(this).removeClass('panel-collapsed');
-					$(this).find('.chevron').removeClass('glyphicon-chevron-right').addClass('glyphicon-chevron-down');
-				}
-				else {
-					// collapse the panel
-					$(this).parents('.panel').find('.panel-content').slideUp();
-					$(this).addClass('panel-collapsed');
-					$(this).find('.chevron').removeClass('glyphicon-chevron-down').addClass('glyphicon-chevron-right');
-				}
+			$.each(codeSamples, function (sampleIndex, sampleObj) {
+				var tabs = "";
+				var tabContents = "";
+				$.each(sampleObj["files"], function(fileIndex, fileObj){
+					var active = (fileIndex == 0 ? " active" : "");
+					tabs += "<li class='nav-item'><a class='nav-link" + active + "' href='#code-file-" + sampleIndex + "-" + fileIndex + "' data-toggle='tab'>" + fileObj["name"] + "</a></li>";
+					tabContents += "<div role='tabpanel' class='load-code tab-pane " + active + " in' id='code-file-" + sampleIndex + "-" + fileIndex + "'><div class='spinner-border' role='status'><span class='sr-only'>Loading...</span></div></div>";
+				});
+
+				$("#code").append("<div class='card code-card' id='code-sample-"
+					+ sampleIndex 
+					+ "'><div class='code-header card-header'><h5 class='card-title unselectable'><i class='fas fa-angle-right chevron'></i> " 
+					+ sampleObj["name"] 
+					+ "</h5></div><div class='code-files collapse' id='#code1block'><div class='card-header'><ul class='nav nav-tabs card-header-tabs'>" 
+					+ tabs 
+					+ "</ul></div><div class='card-body'><div class='tab-content'>" 
+					+ tabContents 
+					+ "</div></div></div></div>");
+			});
+
+			$('.nav-item a').on('shown.bs.tab', function(event){ $(event.relatedTarget).removeClass("show"); });
+			$('.code-header').on("click", function (e) { $(this).parent().find('.code-files').collapse('toggle'); console.log("fdsafd"); });
+			$('.code-files').on("show.bs.collapse", function (e) { $(this).parent().find('.code-header .chevron').removeClass('fa-angle-right').addClass('fa-angle-down'); });
+			$('.code-files').on("hide.bs.collapse", function (e) { $(this).parent().find('.code-header .chevron').removeClass('fa-angle-down').addClass('fa-angle-right'); });
+
+			$.each(codeSamples, function (sampleIndex, sampleObj) {
+				$.each(sampleObj["files"], function(fileIndex, fileObj) {
+					$.ajax({
+						url : fileObj["src"],
+						dataType: "text",
+						success : function (data) {
+							data = data.split("<").join("&lt;"); //swap <
+							data = data.split(">").join("&gt;"); //swap >
+							data = linkify(data);
+							$("#code-file-" + sampleIndex + "-" + fileIndex).html("<pre><code>" + data + "</code></pre>");
+						}
+					});
+				});
 			});
 		});
 	</script>
 
-	<!-- Google Code Syntax Highlighting Engine - Must be after my own scripts (I'm not exactly sure why...) -->
-	<script type="text/javascript" src="//google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+	<!-- Google Code Syntax Highlighting Engine - Must be after my own scripts (I'm not exactly sure why...) 
+	<script type="text/javascript" src="//google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>-->
 
 	<!-- Google Analytics -->
 	<script type="text/javascript">
