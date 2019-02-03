@@ -469,6 +469,9 @@
 							data = data.split(">").join("&gt;"); //swap >
 							data = linkify(data);
 							$("#code-file-" + sampleIndex + "-" + fileIndex).html("<pre><code>" + data + "</code></pre>");
+						},
+						error : function (){
+							$("#code-file-" + sampleIndex + "-" + fileIndex).html("Failed to load file");
 						}
 					});
 				});
